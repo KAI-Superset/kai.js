@@ -1,0 +1,30 @@
+{
+  "name": "kai.js",
+  "version": "1.0.0",
+  "description": "API wrapper for KNRTU-KAI API",
+  "main": "Source/Imports/General/index.js",
+  "types": "Source/Imports/General/index.d.ts",
+  "scripts": {
+    "test": "mocha Source/Other/Tests/Mocha/Schedule.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Domin-MND/kai.js.git"
+  },
+  "keywords": [
+    "api"
+  ],
+  "author": "domin-mnd",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Domin-MND/kai.js/issues"
+  },
+  "homepage": "https://pkai.me/superset/kai.js",
+  "dependencies": {
+    "axios": "^1.1.2"
+  },
+  "devDependencies": {
+    "mocha": "^10.0.0",
+    "typescript": "^4.8.4"
+  }
+}

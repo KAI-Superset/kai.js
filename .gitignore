@@ -1,0 +1,14 @@
+# Node
+node_modules
+package-lock.json
+
+# Yarn
+yarn.lock
+.yarnrc
+
+# Webstorm
+.idea
+
+# Other
+Source/Other/Tests/Temps
+.git
