@@ -17,13 +17,13 @@ pnpm add kai.js
 ## Links
 
 - [KNRTU-KAI website](https://kai.ru/main)
-- [KAI Superset website](https://pkai.me/superset)
-- [Github](https://github.com/KAI-Superset/kai.js)
-- [Documentation](https://pkai.me/superset/kai.js)
+- [KAI Superset website](https://supersetkai.ru)
+- [Github](https://github.com/supersetkai/kai.js)
+- [Documentation](https://supersetkai.ru/kai.js)
 
 ## Usage
 
-You can find more about API wrapper usage on [this page](https://pkai.me/docs/kai.js)
+You can find more about API wrapper usage on [this page](https://docs.supersetkai.ru/kai.js)
 
 In order to get started with the package, define the class:
 

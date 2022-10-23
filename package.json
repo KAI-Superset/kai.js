@@ -19,7 +19,7 @@
   "bugs": {
     "url": "https://github.com/Domin-MND/kai.js/issues"
   },
-  "homepage": "https://pkai.me/superset/kai.js",
+  "homepage": "https://supersetkai.ru/projects/kai.js",
   "dependencies": {
     "axios": "^1.1.2"
   },
