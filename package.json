@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Domin-MND/kai.js.git"
+    "url": "git+https://github.com/supersetkai/kai.js.git"
   },
   "keywords": [
     "api"
   ],
   "author": "domin-mnd",
-  "license": "ISC",
+  "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/Domin-MND/kai.js/issues"
+    "url": "https://github.com/supersetkai/kai.js/issues"
   },
   "homepage": "https://supersetkai.ru/projects/kai.js",
   "dependencies": {
