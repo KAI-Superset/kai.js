@@ -1,6 +1,6 @@
 # Node
 node_modules
-# package-lock.json
+package-lock.json
 
 # Yarn
 yarn.lock
@@ -12,4 +12,3 @@ yarn.lock
 # Other
 Source/Other/Tests/Temps
 .git
-.env
