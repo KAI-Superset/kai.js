@@ -7,9 +7,9 @@ A small API wrapper for KNRTU-KAI.
 Installation can be done with `npm`, `yarn` or `pnpm`:
 
 ```
-npm install kai.js
-yarn add kai.js
-pnpm add kai.js
+npm install @supersetkai/kai.js
+yarn add @supersetkai/kai.js
+pnpm add @supersetkai/kai.js
 ```
 
 > Node.js 10 or newer is required
@@ -28,13 +28,13 @@ You can find more about API wrapper usage on [this page](https://docs.supersetka
 In order to get started with the package, define the class:
 
 ```js
-const { Schedule } = require('kai.js');
+const { Schedule } = require('@supersetkai/kai.js');
 
 const schedule = new Schedule();
 ```
 
 ```ts
-import { Schedule, ScheduleInterface } from 'kai.js';
+import { Schedule, ScheduleInterface } from '@supersetkai/kai.js';
 
 const schedule: ScheduleInterface = new Schedule();
 ```
