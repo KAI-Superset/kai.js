@@ -1,14 +1,12 @@
 import { AxiosPromise } from "axios";
 
 export class Schedule {
-    constructor() {}
+    constructor();
 
-    raw = {
-        getGroups,
-        getSchedule
-    }
-    getGroups;
-    getSchedule;
+    raw: RawSchedule;
+
+    getGroups: (groupNumber: Number) => Promise<Array<ScheduleSpace.Group.Formatted>>;
+    getSchedule: (groupNumber: Number) => Promise<ScheduleSpace.Formatted>;
 }
 
 interface RawSchedule {
@@ -49,7 +47,7 @@ declare namespace ScheduleSpace {
         Array<Subject.Formatted>,
     ];
 
-    declare namespace Subject {
+    namespace Subject {
         export type Raw = {
             prepodNameEnc: String,
             dayDate: String,
@@ -112,7 +110,7 @@ declare namespace ScheduleSpace {
         }
     }
 
-    declare namespace Group {
+    namespace Group {
         export type Raw = {
             id: Number,
             group: String,
@@ -132,9 +130,9 @@ declare namespace ScheduleSpace {
     }
 }
 
-export const parser = {
-    subject: (subject: ScheduleSpace.Subject.Raw) => ScheduleSpace.Subject.Formatted,
-    group: (group: ScheduleSpace.Group.Raw) => ScheduleSpace.Group.Formatted
+export declare namespace parser {
+    export type subject = (subject: ScheduleSpace.Subject.Raw) => ScheduleSpace.Subject.Formatted;
+    export type group = (group: ScheduleSpace.Group.Raw) => ScheduleSpace.Group.Formatted;
 }
 
 export function request({}: KaiRequest): AxiosPromise;
