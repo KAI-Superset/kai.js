@@ -6,18 +6,19 @@ export class Schedule {
     raw: RawSchedule;
 
     getGroups: (groupNumber: Number) => Promise<Array<ScheduleSpace.Group.Formatted>>;
-    getSchedule: (groupNumber: Number) => Promise<ScheduleSpace.Formatted>;
+    getSchedule: (groupNumber: Number) => Promise<ScheduleSpace.Formatted & ScheduleSpace.Error>;
 }
 
 interface RawSchedule {
     getGroups: (groupNumber: Number) => Promise<Array<ScheduleSpace.Group.Raw>>,
-    getSchedule: (groupNumber: Number) => Promise<ScheduleSpace.Raw>
+    getSchedule: (groupNumber: Number) => Promise<ScheduleSpace.Raw & ScheduleSpace.Error>
 }
 
 export interface ScheduleInterface {
-    raw: RawSchedule;
-    getGroups: (groupNumber: Number) => Promise<Array<ScheduleSpace.Group.Formatted>>;
-    getSchedule: (groupNumber: Number) => Promise<ScheduleSpace.Formatted>;
+    raw: RawSchedule,
+
+    getGroups: (groupNumber: Number) => Promise<Array<ScheduleSpace.Group.Formatted>>,
+    getSchedule: (groupNumber: Number) => Promise<ScheduleSpace.Formatted & ScheduleSpace.Error>
 }
 
 export interface KaiRequest {
@@ -29,6 +30,15 @@ export interface KaiRequest {
 }
 
 declare namespace ScheduleSpace {
+
+    export interface Error extends Raw extends Formatted {
+        error: {
+            english: string,
+            russian: string
+        },
+        ids: Group.Raw[]
+    }
+
     export type Raw = {
         "1": Array<Subject.Raw>,
         "2": Array<Subject.Raw>,
