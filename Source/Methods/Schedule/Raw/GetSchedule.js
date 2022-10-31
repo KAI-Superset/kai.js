@@ -2,6 +2,9 @@ const request = require('../../../Utilities/Functions/Request');
 
 module.exports = async function getSchedule(groupNumber) {
     const groupId = await require('../Formatted/GetGroups')(groupNumber);
+
+    if (groupId.error) return groupId;
+
     if (groupId.length !== 1) {
         return {
             error: {

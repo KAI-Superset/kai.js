@@ -11,6 +11,7 @@ module.exports = async function request({
         method: method,
         url: url,
         maxRedirects: 5,
+        // timeout: 10000, // 10 секунд таймаута, убрано из-за ошибочных таймаутов
         params: params,
         data: data,
         headers: {
@@ -20,5 +21,15 @@ module.exports = async function request({
         }
     };
 
-    return await axios(config);
+    const error = (error) => {
+        return {
+            error: {
+                russian: 'Похоже сервер не работает. Попробуйте позже.',
+                english: 'It looks like the server is down. Try again later.'
+            },
+            errno: error.errno,
+        }
+    }
+
+    return await axios(config).catch(error);
 }

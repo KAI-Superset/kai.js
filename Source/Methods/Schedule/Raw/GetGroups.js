@@ -13,5 +13,7 @@ module.exports = async function getGroups(groupNumber) {
         contentType: 'application/json'
     });
 
+    if (response.error) return response;
+
     return response.data;
 }

@@ -3,9 +3,7 @@ const subjectParse = require('../../../Utilities/Parsers/Schedule/Subject');
 module.exports = async function getSchedule(groupNumber) {
     const request = await require('../Raw/GetSchedule')(groupNumber);
 
-    if (request.error) {
-        return request;
-    }
+    if (request.error) return request;
 
     const response = [];
 
