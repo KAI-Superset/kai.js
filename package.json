@@ -1,6 +1,6 @@
 {
   "name": "@supersetkai/kai.js",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "API wrapper for KNRTU-KAI API",
   "main": "src/imports/general/index.js",
   "types": "src/imports/general/index.d.ts",
