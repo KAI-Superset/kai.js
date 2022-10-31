@@ -36,8 +36,8 @@ declare namespace ScheduleSpace {
             english: string,
             russian: string
         },
-        ids: Group.Raw[]?,
-        errno: Number?
+        ids?: Group.Raw[],
+        errno?: Number
     }
 
     export type Raw = {
