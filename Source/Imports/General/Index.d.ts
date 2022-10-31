@@ -31,7 +31,7 @@ export interface KaiRequest {
 
 declare namespace ScheduleSpace {
 
-    export interface Error extends Raw extends Formatted {
+    export interface Error {
         error: {
             english: string,
             russian: string
