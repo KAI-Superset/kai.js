@@ -1,4 +1,4 @@
-const request = require('../../../Utilities/Functions/Request');
+const request = require('../../../util/functions/request');
 
 module.exports = async function getGroups(groupNumber) {
     const response = await request({

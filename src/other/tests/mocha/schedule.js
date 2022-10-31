@@ -1,5 +1,5 @@
 const assert = require('assert');
-const { Schedule, request, parser } = require('../../../Imports/General/Index');
+const { Schedule, request, parser } = require('../../../imports/general');
 const schedule = new Schedule();
 
 describe('Schedule', () => {
@@ -54,7 +54,7 @@ describe('Schedule', () => {
             it('Does not return empty object for 4131 query', async () => {
                 const getSchedule4131 = await schedule.raw.getSchedule(4131);
 
-                assert.notDeepEqual(getSchedule4131, {}, "Schedule is empty");
+                assert.notDeepEqual(getSchedule4131, {}, "schedule is empty");
             });
 
         });
@@ -130,7 +130,7 @@ describe('Schedule', () => {
             it('Does not return empty object for 4131 query', async () => {
                 const getSchedule4131 = await schedule.getSchedule(4131);
 
-                assert.notDeepEqual(getSchedule4131, {}, "Schedule is empty");
+                assert.notDeepEqual(getSchedule4131, {}, "schedule is empty");
             });
 
             describe('scheduleParse', () => {

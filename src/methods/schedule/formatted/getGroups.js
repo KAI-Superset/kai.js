@@ -1,7 +1,7 @@
-const groupParse = require('../../../Utilities/Parsers/Schedule/Group');
+const groupParse = require('../../../util/parsers/schedule/group');
 
 module.exports = async function getGroups(groupNumber) {
-    const request = await require('../Raw/GetGroups')(groupNumber);
+    const request = await require('../raw/getGroups')(groupNumber);
 
     if (request.error) return request;
 

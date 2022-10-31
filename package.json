@@ -2,10 +2,10 @@
   "name": "@supersetkai/kai.js",
   "version": "0.1.1",
   "description": "API wrapper for KNRTU-KAI API",
-  "main": "Source/Imports/General/index.js",
-  "types": "Source/Imports/General/index.d.ts",
+  "main": "src/imports/general/index.js",
+  "types": "src/imports/general/index.d.ts",
   "scripts": {
-    "test": "mocha Source/Other/Tests/Mocha/Schedule.js"
+    "test": "mocha src/other/tests/mocha/schedule.js"
   },
   "repository": {
     "type": "git",

@@ -1,4 +1,4 @@
-const toCapitalize = require('../../Functions/Capitalize');
+const toCapitalize = require('../../functions/capitalize');
 
 module.exports = function subjectParse(subject) {
     let subjectResponse = {

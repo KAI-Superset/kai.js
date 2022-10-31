@@ -10,5 +10,5 @@ yarn.lock
 .idea
 
 # Other
-Source/Other/Tests/Temps
+src/other/tests/temps
 .git

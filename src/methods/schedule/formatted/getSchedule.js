@@ -1,7 +1,7 @@
-const subjectParse = require('../../../Utilities/Parsers/Schedule/Subject');
+const subjectParse = require('../../../util/parsers/schedule/subject');
 
 module.exports = async function getSchedule(groupNumber) {
-    const request = await require('../Raw/GetSchedule')(groupNumber);
+    const request = await require('../raw/getSchedule')(groupNumber);
 
     if (request.error) return request;
 
