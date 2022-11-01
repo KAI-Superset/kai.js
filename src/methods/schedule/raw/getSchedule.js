@@ -27,5 +27,7 @@ module.exports = async function getSchedule(groupNumber) {
         contentType: 'application/x-www-form-urlencoded'
     });
 
+    if (response?.error) return response;
+    
     return response.data;
 }
