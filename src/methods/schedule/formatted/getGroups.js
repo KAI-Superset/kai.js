@@ -3,7 +3,7 @@ const groupParse = require('../../../util/parsers/schedule/group');
 module.exports = async function getGroups(groupNumber) {
     const request = await require('../raw/getGroups')(groupNumber);
 
-    if (request.error) return request;
+    if (request?.error) return request;
 
     const requestArray = Object.keys(request);
     const response = [];

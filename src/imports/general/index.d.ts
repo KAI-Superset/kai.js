@@ -5,19 +5,19 @@ export class Schedule {
 
     raw: RawSchedule;
 
-    getGroups: (groupNumber: Number) => Promise<Array<ScheduleSpace.Group.Formatted>>;
+    getGroups: (groupNumber?: Number) => Promise<Array<ScheduleSpace.Group.Formatted>>;
     getSchedule: (groupNumber: Number) => Promise<ScheduleSpace.Formatted & ScheduleSpace.Error>;
 }
 
 interface RawSchedule {
-    getGroups: (groupNumber: Number) => Promise<Array<ScheduleSpace.Group.Raw>>,
+    getGroups: (groupNumber?: Number) => Promise<Array<ScheduleSpace.Group.Raw>>,
     getSchedule: (groupNumber: Number) => Promise<ScheduleSpace.Raw & ScheduleSpace.Error>
 }
 
 export interface ScheduleInterface {
     raw: RawSchedule,
 
-    getGroups: (groupNumber: Number) => Promise<Array<ScheduleSpace.Group.Formatted>>,
+    getGroups: (groupNumber?: Number) => Promise<Array<ScheduleSpace.Group.Formatted>>,
     getSchedule: (groupNumber: Number) => Promise<ScheduleSpace.Formatted & ScheduleSpace.Error>
 }
 
