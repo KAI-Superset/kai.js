@@ -1,17 +1,20 @@
 const request = require('../../../util/functions/request');
 
 module.exports = async function getSchedule(groupNumber) {
-    const groupId = await require('../formatted/getGroups')(groupNumber);
+    const groups = await require('../formatted/getGroups')(groupNumber);
 
-    if (groupId?.error) return groupId;
+    if (groups?.error) return groups;
 
-    if (groupId.length !== 1) {
+    let groupId;
+    if (groups.length >= 1 && groups[0].group.name == groupNumber) {
+        groupId = groups[0].group.id;
+    } else {
         return {
             error: {
                 english: 'Found more/less than 1 group IDs for the search query!',
                 russian: 'Было найдено больше/меньше 1 Айди группы из поиска!',
             },
-            ids: groupId
+            ids: groups
         }
     }
 
@@ -23,7 +26,7 @@ module.exports = async function getSchedule(groupNumber) {
             p_p_lifecycle: 2,
             p_p_resource_id: 'schedule'
         },
-        data: `groupId=${groupId[0].group.id}`,
+        data: `groupId=${groupId}`,
         contentType: 'application/x-www-form-urlencoded'
     });
 

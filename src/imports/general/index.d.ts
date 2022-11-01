@@ -79,7 +79,7 @@ declare namespace ScheduleSpace {
 
         export type Formatted = {
             building: {
-                number: Number
+                number: Number | String
             },
             class: {
                 name: String,

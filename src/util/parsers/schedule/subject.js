@@ -18,7 +18,7 @@ module.exports = function subjectParse(subject) {
                 subjectResponse.classroom.number = +clear ? +clear : clear;
                 break;
             case 'buildNum':
-                subjectResponse.building.number = +clear;
+                subjectResponse.building.number = +clear ? +clear : clear;
                 break;
             case 'dayNum':
                 subjectResponse.day.number = +clear;
