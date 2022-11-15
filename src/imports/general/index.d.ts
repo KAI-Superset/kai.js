@@ -91,7 +91,7 @@ declare namespace ScheduleSpace {
             },
             day: {
                 evenOdd: {
-                    name: String,
+                    raw: String,
                     even: Boolean,
                     odd: Boolean
                 },
